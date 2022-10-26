@@ -1,15 +1,10 @@
 $theme-colors: (
   'primary': #fff,
-  'secondary': #8d8d8d
+  'secondary': #8d8d8d,
+  'blue': #334ac4,
+  'gray': #8d8d8d
 );
 
-$color: (
-  'blue-dark': #334ac3
-);
+$body-bg: #e5e5e5;
 
-$blue: #334ac3;
-$blue-dark: #334ac3;
-
-$body-bg: #fff;
-
-@import 'node_modules/bootstrap/scss/bootstrap';
+@import '~bootstrap/scss/bootstrap';

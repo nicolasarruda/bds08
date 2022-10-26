@@ -1,0 +1,116 @@
+.filter-container {
+  margin-top: 10px;
+  width: 100%;
+  height: 130px;
+  padding: 40px 15px;
+  border-radius: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.input-container {
+  height: 50px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.city-filter-select__placeholder {
+  width: 100%;
+  border: none;
+  font-weight: normal !important;
+  align-items: center !important;
+  font-size: 16px !important;
+  font-family: 'Ubuntu' !important;
+  padding-left: 17px !important;
+  letter-spacing: -0.015em !important;
+}
+
+.city-filter-select__control {
+  border: 1px solid var(--bs-gray) !important;
+  border-radius: 4px !important;
+  max-width: 290px !important;
+  height: 50px !important;
+  padding-right: 8px !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__value {
+  font-size: 16px !important;
+  font-family: 'Ubuntu' !important;
+  max-width: 210px !important;
+  padding-left: 17px !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__value-container {
+  font-size: 16px !important;
+  max-width: 210px !important;
+  font-family: 'Ubuntu' !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__value-container-has-value {
+  font-size: 16px !important;
+  max-width: 210px !important;
+  margin: 0 !important;
+  font-family: 'Ubuntu' !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__single-value {
+  margin: 0;
+  padding-left: 17px !important;
+  font-size: 16px !important;
+  max-width: 210px !important;
+  font-family: 'Ubuntu' !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__input {
+  width: 100%;
+}
+
+.city-filter-select__indicators::before {
+  flex-direction: row !important;
+  max-width: 70px !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__indicators::after {
+  flex-direction: row !important;
+  max-width: 70px !important;
+  color: var(--bs-gray) !important;
+}
+
+.city-filter-select__clear-indicator {
+  max-width: 30px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.city-filter-select__indicators span {
+  display: none;
+}
+
+.city-filter-select__dropdown-indicator {
+  max-width: 40px !important;
+  padding: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-left: 5px;
+}
+
+.city-filter-select__clear-indicator svg {
+  color: var(--bs-gray);
+}
+
+.city-filter-select__dropdown-indicator svg {
+  color: var(--bs-gray);
+}
+
+@media (min-width: 576px) {
+  .filter-container {
+    margin-top: 40px;
+    padding: 40px 40px;
+  }
+}
