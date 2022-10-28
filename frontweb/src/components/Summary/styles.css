@@ -1,0 +1,91 @@
+.summary-container {
+  margin-top: 10px;
+  height: 517px;
+  border-radius: 5px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 40px 0 70px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-price-container {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  min-width: 300px;
+}
+
+.summary-price-container h1 {
+  margin-bottom: 0;
+  color: var(--bs-blue);
+  font-weight: bold;
+  font-size: 36px;
+  cursor: default;
+}
+
+.summary-price-container span {
+  color: var(--bs-gray);
+  cursor: default;
+}
+
+.summary-graph-container {
+  margin: 10px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.apexcharts-canvas {
+  display: flex;
+  flex-direction: column;
+  align-items: center !important;
+  justify-content: space-around !important;
+}
+
+.apexcharts-legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around !important;
+}
+
+@media (min-width: 576px) {
+  .summary-container {
+    margin-top: 40px;
+  }
+
+  .summary-price-container {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 992px) {
+  .summary-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .summary-price-container {
+    display: flex;
+    flex-direction: column;
+    padding-right: 200px;
+    min-width: 400px;
+  }
+
+  .summary-graph-container {
+    margin: 10px 0px 0px 0px;
+    padding-right: 170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .summary-price-container {
+    padding-right: 180px;
+  }
+
+  .summary-graph-container {
+    padding-right: 160px;
+  }
+}
