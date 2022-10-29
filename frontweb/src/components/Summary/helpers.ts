@@ -1,9 +1,9 @@
 import { ApexOptions } from 'apexcharts';
 
-export const buildChartDonut = () => {
+export const buildChartDonut = (labels: string[] = []) => {
   return {
     colors: ['#FF7A00', '#7234F5', '#FF0000'],
-    labels: ['OPÇÃO 1', 'OPÇÃO 2', 'OPÇÃO 3'],
+    labels: labels,
     dataLabels: {
       distributed: true,
       textAnchor: 'start',
