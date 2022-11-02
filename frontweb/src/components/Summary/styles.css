@@ -33,19 +33,20 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  flex-direction: column;
 }
 
 .apexcharts-canvas {
-  display: flex;
-  flex-direction: column;
+  display: flex !important;
+  flex-direction: column !important;
   align-items: center !important;
   justify-content: space-around !important;
 }
 
 .apexcharts-legend {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
   justify-content: space-around !important;
 }
 
@@ -65,13 +66,14 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
+    width: 960px;
   }
 
   .summary-price-container {
     display: flex;
     flex-direction: column;
     padding-right: 200px;
-    min-width: 400px;
+    width: 960px;
   }
 
   .summary-graph-container {

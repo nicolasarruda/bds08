@@ -4,10 +4,12 @@ import ReactApexChart from 'react-apexcharts';
 import { buildChartDonut } from './helpers';
 import { FilterStoreData } from '../Filter';
 import { useEffect, useMemo, useState } from 'react';
-import { formatGender, SaleByGender } from '../../types/sale-by-gender';
+import { SaleByGender } from '../../types/sale-by-gender';
+import { formatGender } from '../../utils/formatters';
 import { buildFilterParams, requestBackend } from '../../utils/requests';
 import { AxiosRequestConfig } from 'axios';
 import { SaleSummary } from '../../types/sale-summary';
+import { formatPrice } from '../../utils/formatters';
 
 type Props = {
   filterStoreData?: FilterStoreData;
@@ -27,7 +29,6 @@ export const Summary = ({ filterStoreData }: Props) => {
 
     requestBackend(config).then((response) => {
       setGenderSummary(response.data);
-      console.log(response.data);
     });
   }, [params]);
 
@@ -40,14 +41,13 @@ export const Summary = ({ filterStoreData }: Props) => {
 
     requestBackend(config).then((response) => {
       setSummary(response.data);
-      console.log(response.data);
     });
   }, [params]);
 
   return (
     <div className="summary-container bg-primary">
       <div className="summary-price-container">
-        <h1>R$ {summary?.sum}</h1>
+        <h1>{summary === undefined ? 0 : formatPrice(summary.sum)}</h1>
         <span>Total de vendas</span>
       </div>
       <div className="summary-graph-container">

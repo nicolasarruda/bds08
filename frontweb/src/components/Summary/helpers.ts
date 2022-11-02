@@ -32,11 +32,11 @@ export const buildChartDonut = (labels: string[] = []) => {
       floating: false,
       position: 'bottom',
       containerMargin: {
-        top: 20
+        top: 10
       },
       itemMargin: {
-        vertical: 5,
-        horizontal: 0
+        vertical: 0,
+        horizontal: 10
       },
       markers: {
         height: 10,
@@ -44,6 +44,7 @@ export const buildChartDonut = (labels: string[] = []) => {
         offsetX: -10,
         offsetY: 0
       },
+
       fontSize: '14',
       fontWeight: '400',
       fontFamily: 'Ubuntu',
@@ -62,11 +63,12 @@ export const buildChartDonut = (labels: string[] = []) => {
     },
     grid: {
       padding: {
-        top: 0,
+        top: -20,
         right: 0,
         bottom: 0,
         left: 0
-      }
+      },
+      position: 'back'
     },
     tooltip: {
       items: {

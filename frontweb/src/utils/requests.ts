@@ -9,6 +9,6 @@ export const requestBackend = (config: AxiosRequestConfig) => {
 
 export const buildFilterParams = (filterData?: FilterStoreData) => {
   return {
-    id: filterData?.name
+    storeId: filterData?.city?.id
   };
 };

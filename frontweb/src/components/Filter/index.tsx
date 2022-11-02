@@ -1,24 +1,24 @@
 import './styles.css';
 import { Controller, useForm } from 'react-hook-form';
 import Select from 'react-select';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Store } from '../../types/store';
 import { requestBackend } from '../../utils/requests';
 import { AxiosRequestConfig } from 'axios';
-
-type Props = {
-  onFilterChange: (data: FilterStoreData) => void;
-};
 
 export type FilterStoreData = {
   name: string;
   city: Store | null;
 };
 
+type Props = {
+  onFilterChange: (data: FilterStoreData) => void;
+};
+
 export const Filter = ({ onFilterChange }: Props) => {
   const [selectStore, setSelectStore] = useState<Store[]>([]);
 
-  const { control, handleSubmit } = useForm<FilterStoreData>();
+  const { control, handleSubmit, setValue, getValues } = useForm<FilterStoreData>();
 
   const onSubmit = (formData: FilterStoreData) => {
     onFilterChange(formData);
@@ -32,7 +32,6 @@ export const Filter = ({ onFilterChange }: Props) => {
 
     requestBackend(config)
       .then((response) => {
-        console.log(response.data);
         setSelectStore(response.data);
       })
       .catch(() => {
@@ -41,7 +40,14 @@ export const Filter = ({ onFilterChange }: Props) => {
   }, []);
 
   const handleChangeCity = (value: Store) => {
-    console.log('Cidade: ', value);
+    setValue('city', value);
+
+    const obj: FilterStoreData = {
+      name: getValues('city.name'),
+      city: getValues('city')
+    };
+
+    onFilterChange(obj);
   };
 
   return (
@@ -59,8 +65,8 @@ export const Filter = ({ onFilterChange }: Props) => {
                 placeholder="Selecione a cidade"
                 classNamePrefix="city-filter-select"
                 onChange={(value) => handleChangeCity(value as Store)}
-                getOptionLabel={(initialData) => initialData.name}
-                getOptionValue={(initialData) => String(initialData.id)}
+                getOptionLabel={(city: Store) => city.name}
+                getOptionValue={(city: Store) => String(city.id)}
               />
             )}
           />

@@ -114,3 +114,9 @@
     padding: 40px 40px;
   }
 }
+
+@media (min-width: 992px) {
+  .filter-container {
+    width: 960px;
+  }
+}

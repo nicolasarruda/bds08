@@ -6,13 +6,3 @@ export type SaleByGender = [
     sum: number;
   }
 ];
-
-export const formatGender = (gender: Gender) => {
-  const textByGender = {
-    MALE: 'Masculino',
-    FEMALE: 'Feminino',
-    OTHER: 'Outro'
-  };
-
-  return textByGender[gender];
-};
